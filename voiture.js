@@ -1,0 +1,110 @@
+const voiture = document.getElementsByClassName('ferrari-arriere');
+var etoileg = document.getElementsByClassName('.etoile-coupe-gauche');
+var charles = document.getElementsByClassName('charles');
+var ferraricote = document.getElementsByClassName('ferrari-cote')[0];
+var question = document.getElementsByClassName('question')[0];
+var ferraridevant = document.getElementsByClassName('ferrari-devant')[0];
+
+
+
+document.querySelectorAll(".ferrari-arriere").forEach(voiture => {
+    voiture.addEventListener("click", () => {
+        voiture.classList.toggle("ferrari-arriere-active");
+    });
+});
+
+document.querySelectorAll(".etoile-coupe-gauche").forEach((etoileg, index) => {
+    etoileg.addEventListener("click", () => {
+        etoileg.classList.toggle("etoile-coupe-gauche-active")
+        for (var i = 0; i < charles.length; i++) {
+            charles[i].classList.toggle("charles-active");
+            setTimeout((index) => {
+                charles[index].classList.remove("charles-active");
+                ferraricote.classList.add("ferrari-cote-active");
+                question.classList.add('question-active');
+            }, 2000, i);
+        }
+
+    });
+});
+// Récupérer les éléments de réponse
+const reponses = document.querySelectorAll('.reponse');
+var ferraridevant = document.querySelector('.ferrari-devant');
+var etoileentiere1 = document.querySelector('.etoile-entiere-1');
+var devinette = document.querySelectorAll(".devinette")[0];
+var etoileentiere2 = document.querySelector('.etoile-entiere-2')[0];
+
+// Ajouter un écouteur d'événement à chaque réponse
+reponses.forEach(reponse => {
+    reponse.addEventListener('click', function () {
+        const reponseSelectionnee = this;
+        const estBonneReponse = reponseSelectionnee.classList.contains('bonne');
+
+        // Modifier les classes en fonction de la réponse sélectionnée
+        reponses.forEach(reponse => {
+            if (reponse === reponseSelectionnee) {
+                if (estBonneReponse) {
+                    reponse.classList.add('gg-question');
+                    question.classList.remove("question-active");
+                    ferraricote.classList.remove("ferrari-cote-active");
+                    etoileentiere1.classList.add("etoile-entiere-1-active");
+
+                    ferraridevant.classList.add("ferrari-devant-active");
+
+
+                    for (var i = 0; i < charles.length; i++) {
+                        charles[i].classList.toggle("charles-active");
+                        setTimeout((index) => {
+                            charles[index].classList.remove("charles-active");
+                            devinette.classList.add("devinette-active");
+                            etoileg.classList.remove("etoile-coupe-gauche-active");
+                        }, 2000, i);
+
+                    };
+                } else {
+                    reponse.classList.add('fausse');
+                }
+            }
+        });
+
+        // Afficher un message en fonction de la réponse sélectionnée
+        const pop = document.getElementById('pop');
+        if (estBonneReponse) {
+            pop.innerText = 'Bonne réponse !!!';
+
+        } else {
+            pop.innerText = 'Mauvaise réponse ! Réessayer! ';
+        }
+    });
+});
+
+var etoileentiere2 = document.querySelector(".etoile-entiere-2");
+
+document.querySelector("#MYform").addEventListener("submit", function (event) {
+    event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+    // Récupération de la réponse de l'utilisateur
+    var reponseUtilisateur = document.getElementById("reponseInput").value;
+
+    // Vérification de la réponse
+    const popd = document.getElementById("popd");
+    if (reponseUtilisateur.toLowerCase() === "ferrari") {
+        devinette.classList.remove("devinette-active");
+        for (var i = 0; i < charles.length; i++) {
+            charles[i].classList.toggle("charles-active");
+            setTimeout((index) => {
+                charles[index].classList.remove("charles-active");
+                etoileentiere2.classList.add("etoile-entiere-2-active");
+            }, 3000, i);
+        };
+
+        popd.innerText = "Bonne réponse !!!";
+    } else {
+        popd.innerText = "Mauvaise réponse! Veuillez réessayer.";
+    }
+});
+
+
+
+
+
