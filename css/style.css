@@ -75,6 +75,16 @@ body {
   padding-bottom: 12px;
 }
 
+.explication {
+  position: absolute;
+  left: 556px;
+  top: 29px;
+  font-size: large;
+  background: whitesmoke;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  height: 260px;
+}
+
 .charles {
   opacity: 0;
   transition: 2s ease-in-out;
@@ -370,6 +380,17 @@ li:hover {
 
 .johnny-image-active {
   opacity: 1;
+  transition: 1s ease-in-out;
+
+}
+
+.johnny-image-active2 {
+  opacity: 1;
+  width: 48px;
+  position: absolute;
+  left: 949px;
+  opacity: 0;
+  bottom: 210px;
   transition: 1s ease-in-out;
 }
 
