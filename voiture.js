@@ -103,6 +103,11 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                 etoileentiere2.classList.add("etoile-entiere-2-active");
                 johnny.classList.add("johnny-image-active");
                 salut.classList.add("salut-active");
+                setTimeout((index) => {
+                    johnny.classList.remove("johnny-image-active");
+                    johnny.classList.add("johnny-image-active2");
+                    salut.classList.remove("salut-active");
+                }, 5000, i);
             }, 3000, i);
         };
 
