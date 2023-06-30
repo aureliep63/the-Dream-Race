@@ -335,6 +335,25 @@ li:hover {
   text-shadow: 2px 1px black;
 }
 
+.salut {
+  position: absolute;
+  left: 600pX;
+  background-color: whitesmoke;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 13% 100%, 50% 75%, 0% 75%);
+  height: 123px;
+  line-height: 22px;
+  bottom: 194px;
+  opacity: 0;
+  display: inline-block;
+  pointer-events: none;
+  transition: 1s ease-in-out;
+}
+
+.salut-active {
+  opacity: 1;
+  transition: 1s ease-in-out;
+}
+
 .johnny-image {
   display: inline-block;
   width: 120px;
@@ -342,12 +361,16 @@ li:hover {
   left: 503px;
   opacity: 0;
   bottom: 3px;
-  transition: 2s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.salut p {
+  padding: 10px;
 }
 
 .johnny-image-active {
   opacity: 1;
-  transition: 2s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 @keyframes homme {
