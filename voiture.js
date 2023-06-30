@@ -121,7 +121,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     }, 5000, i);
                     setTimeout((index) => {
                         photoleclerc.classList.add("photo-leclerc-active");
-                    }, 20000, i);
+                    }, 12000, i);
                 }, 6000, i);
             }, 3000, i);
         };
