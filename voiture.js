@@ -4,6 +4,7 @@ var charles = document.getElementsByClassName('charles');
 var ferraricote = document.getElementsByClassName('ferrari-cote')[0];
 var question = document.getElementsByClassName('question')[0];
 var ferraridevant = document.getElementsByClassName('ferrari-devant')[0];
+var explication = document.querySelector('.explication');
 
 
 
@@ -111,6 +112,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     johnny.classList.add("johnny-image-active2");
                     salut.classList.remove("salut-active");
                     metroid.classList.add("metroid-active");
+                    poulpe.classList.add("poulpe-active");
                 }, 6000, i);
             }, 3000, i);
         };
