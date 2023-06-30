@@ -434,8 +434,25 @@ li:hover {
   transition: 1s ease-in-out;
 }
 
-@keyframes homme {
-  from {}
+.poulpe {
+  position: absolute;
+  bottom: 314px;
+  right: 749px;
+  padding: 10px;
+  background-color: #795bae;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 100% 91%, 50% 75%, 0% 75%);
+  height: 91px;
+  font-size: x-large;
+  font-weight: bold;
+  color: #5b0101;
+  text-align: center;
+  pointer-events: none;
+}
 
-  to {}
+.poulpe-active {
+  opacity: 1;
+  transition: 3s ease-in-out;
+
 }
