@@ -88,6 +88,7 @@ var johnny = document.querySelector(".johnny-image");
 var salut = document.querySelector(".salut");
 var metroid = document.querySelector(".metroid");
 var poulpe = document.querySelector(".poulpe");
+var photoleclerc = document.querySelector(".photo-leclerc");
 
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -112,6 +113,9 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     salut.classList.remove("salut-active");
                     metroid.classList.add("metroid-active");
                     poulpe.classList.add("poulpe-active");
+                    setTimeout((index) => {
+                        photoleclerc.classList.add("photo-leclerc-active");
+                    }, 6000, i);
                 }, 6000, i);
             }, 3000, i);
         };

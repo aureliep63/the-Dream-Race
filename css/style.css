@@ -456,3 +456,43 @@ li:hover {
   transition: 3s ease-in-out;
 
 }
+
+.photo-leclerc {
+  width: 1019px;
+  position: absolute;
+  left: 243px;
+  bottom: 1px;
+  opacity: 0;
+  Transition: 1s ease-in-out;
+  pointer-events: none;
+}
+
+.photo-leclerc-active {
+  opacity: 1;
+  transition: 2s ease-in-out;
+  background-color: black;
+  padding: 66px 0;
+}
+
+.poulpe1 {
+  position: absolute;
+  bottom: 314px;
+  right: 749px;
+  padding: 10px;
+  background-color: #795bae;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 100% 91%, 50% 75%, 0% 75%);
+  height: 91px;
+  font-size: x-large;
+  font-weight: bold;
+  color: #5b0101;
+  text-align: center;
+  pointer-events: none;
+
+}
+
+.poulpe1-active {
+  opacity: 1;
+  transition: 3s ease-in-out;
+}
