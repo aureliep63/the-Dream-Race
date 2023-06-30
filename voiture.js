@@ -4,12 +4,13 @@ var charles = document.getElementsByClassName('charles');
 var ferraricote = document.getElementsByClassName('ferrari-cote')[0];
 var question = document.getElementsByClassName('question')[0];
 var ferraridevant = document.getElementsByClassName('ferrari-devant')[0];
-
+var explication = document.querySelector(".explication");
 
 
 document.querySelectorAll(".ferrari-arriere").forEach(voiture => {
     voiture.addEventListener("click", () => {
         voiture.classList.toggle("ferrari-arriere-active");
+        explication.classList.add("explication-active");
     });
 });
 
@@ -85,6 +86,7 @@ reponses.forEach(reponse => {
 var etoileentiere2 = document.querySelector(".etoile-entiere-2");
 var johnny = document.querySelector(".johnny-image");
 var salut = document.querySelector(".salut");
+var metroid = document.querySelector(".metroid");
 
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -107,6 +109,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     johnny.classList.remove("johnny-image-active");
                     johnny.classList.add("johnny-image-active2");
                     salut.classList.remove("salut-active");
+                    metroid.classList.add("metroid-active");
                 }, 6000, i);
             }, 3000, i);
         };

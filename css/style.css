@@ -77,12 +77,26 @@ body {
 
 .explication {
   position: absolute;
-  left: 556px;
+  left: 450px;
   top: 29px;
   font-size: large;
   background: #ffe505;
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  height: 203px;
+  height: 300px;
+  transition: 1s ease-in-out;
+  pointer-events: none;
+}
+
+.petitetoile {
+  width: 79px;
+  margin-left: 310px;
+}
+
+
+.explication-active {
+  opacity: 0;
+  transition: 2s ease-in-out;
+
 }
 
 .explication p {
@@ -392,12 +406,31 @@ li:hover {
 }
 
 .johnny-image-active2 {
-  opacity: 1;
-  width: 48px;
+  width: 108px;
   position: absolute;
-  left: 949px;
+  left: 736px;
+  opacity: 1;
+  bottom: 47px;
+  transition: 1s ease-in-out;
+}
+
+.metroid {
+  z-index: 3;
   opacity: 0;
-  bottom: 210px;
+  width: 124px;
+  position: absolute;
+  right: 217px;
+  bottom: -28px;
+  transition: 1s ease-in-out;
+}
+
+.metroid-active {
+  z-index: -4;
+  opacity: 1;
+  width: 251px;
+  position: absolute;
+  right: 575px;
+  bottom: 58px;
   transition: 1s ease-in-out;
 }
 
