@@ -86,6 +86,8 @@ reponses.forEach(reponse => {
 var etoileentiere2 = document.querySelector(".etoile-entiere-2");
 var johnny = document.querySelector(".johnny-image");
 var salut = document.querySelector(".salut");
+var metroid = document.querySelector(".metroid");
+var poulpe = document.querySelector(".poulpe");
 
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -108,6 +110,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     johnny.classList.remove("johnny-image-active");
                     johnny.classList.add("johnny-image-active2");
                     salut.classList.remove("salut-active");
+                    metroid.classList.add("metroid-active");
                 }, 6000, i);
             }, 3000, i);
         };
