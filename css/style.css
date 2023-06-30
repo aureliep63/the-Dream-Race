@@ -204,13 +204,11 @@ li {
 }
 
 li:hover {
-  border-bottom: #f1e8c8;
   font-size: x-large;
 }
 
 #pop {
   font-size: 30px;
-  color: yellow;
   padding: 20px;
 }
 
@@ -269,11 +267,17 @@ li:hover {
 }
 
 .fausse {
-  background-color: red;
+  background-color: rgb(74, 1, 1);
+  border: 3px dashed yellow;
+  color: yellow;
+
 }
 
 .gg-question {
-  background-color: green;
+  background-color: rgb(150, 216, 51);
+  border: 4px dashed green;
+  font-size: x-large;
+
 }
 
 .etoile-entiere-2 {
@@ -313,4 +317,17 @@ li:hover {
 
 #MYform button {
   cursor: pointer;
+}
+
+.bonne-rep {
+  color: rgb(81, 231, 81);
+  font-size: xx-large;
+  text-shadow: 2px 1px black;
+}
+
+.mauvaise-rep {
+  color: rgb(79, 18, 18);
+  text-shadow: 2px 1px black;
+
+
 }

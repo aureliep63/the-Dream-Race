@@ -71,9 +71,13 @@ reponses.forEach(reponse => {
         const pop = document.getElementById('pop');
         if (estBonneReponse) {
             pop.innerText = 'Bonne réponse !!!';
+            pop.classList.add("bonne-rep");
+            pop.classList.remove("mauvaise-rep");
+
 
         } else {
             pop.innerText = 'Mauvaise réponse ! Réessayer! ';
+            pop.classList.add("mauvaise-rep");
         }
     });
 });
@@ -99,8 +103,11 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
         };
 
         popd.innerText = "Bonne réponse !!!";
+        popd.classList.add("bonne-rep");
+        popd.classList.remove("mauvaise-rep");
     } else {
         popd.innerText = "Mauvaise réponse! Veuillez réessayer.";
+        popd.classList.add("mauvaise-rep");
     }
 });
 
