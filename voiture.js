@@ -107,7 +107,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     johnny.classList.remove("johnny-image-active");
                     johnny.classList.add("johnny-image-active2");
                     salut.classList.remove("salut-active");
-                }, 5000, i);
+                }, 6000, i);
             }, 3000, i);
         };
 
