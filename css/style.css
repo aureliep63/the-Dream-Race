@@ -256,9 +256,11 @@ li:hover {
 }
 
 .selecteur {
-  border: 1px solid;
   min-width: 189px;
   padding: 9px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
 
 }
 
@@ -317,6 +319,9 @@ li:hover {
 
 #MYform button {
   cursor: pointer;
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .bonne-rep {
