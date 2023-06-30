@@ -80,9 +80,16 @@ body {
   left: 556px;
   top: 29px;
   font-size: large;
-  background: whitesmoke;
+  background: #ffe505;
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  height: 260px;
+  height: 203px;
+}
+
+.explication p {
+  margin-top: 62px;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 30px;
 }
 
 .charles {
