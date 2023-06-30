@@ -83,6 +83,7 @@ reponses.forEach(reponse => {
 });
 
 var etoileentiere2 = document.querySelector(".etoile-entiere-2");
+var johnny = document.querySelector(".johnny-image");
 
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -99,6 +100,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
                 etoileentiere2.classList.add("etoile-entiere-2-active");
+                johnny.classList.add("johnny-image-active");
             }, 3000, i);
         };
 

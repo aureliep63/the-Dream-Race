@@ -333,6 +333,25 @@ li:hover {
 .mauvaise-rep {
   color: rgb(79, 18, 18);
   text-shadow: 2px 1px black;
+}
 
+.johnny-image {
+  display: inline-block;
+  width: 120px;
+  position: absolute;
+  left: 503px;
+  opacity: 0;
+  bottom: 3px;
+  transition: 2s ease-in-out;
+}
 
+.johnny-image-active {
+  opacity: 1;
+  transition: 2s ease-in-out;
+}
+
+@keyframes homme {
+  from {}
+
+  to {}
 }
