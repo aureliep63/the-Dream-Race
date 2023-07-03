@@ -290,7 +290,6 @@ li:hover {
   top: 196px;
   transition: 4s ease-in-out;
   font-size: x-large;
-  z-index: 11;
 }
 
 .selecteur {
@@ -473,7 +472,7 @@ li:hover {
   left: 243px;
   bottom: 1px;
   opacity: 0;
-  transition: 1s ease-in-out;
+  Transition: 1s ease-in-out;
   pointer-events: none;
 }
 
@@ -524,9 +523,6 @@ li:hover {
   flex-direction: column;
   left: 465px;
   bottom: 135px;
-  opacity: 0;
-  pointer-events: none;
-
 }
 
 .display-inline-block p {
@@ -534,32 +530,9 @@ li:hover {
   font-size: x-large;
 }
 
-.q1,
-.q2,
-.q3 {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.q1-active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.q1,
-.q2,
-.q3 {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.q1-active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.pop1 {
-  opacity: 1;
+.photo-leclerc-flou {
+  filter: blur(18px);
+  transition: 1s ease-in-out;
 }
 
 .q1,
