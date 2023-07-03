@@ -91,8 +91,6 @@ var metroid = document.querySelector(".metroid");
 var poulpe = document.querySelector(".poulpe");
 var photoleclerc = document.querySelector(".photo-leclerc");
 var poulpe1 = document.querySelector(".poulpe1");
-var q1 = document.querySelector(".q1");
-var question1 = document.getElementById("question-1");
 
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -123,11 +121,8 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     }, 5000, i);
                     setTimeout((index) => {
                         photoleclerc.classList.add("photo-leclerc-active");
-                        setTimeout((index) => {
-                            photoleclerc.classList.add("photo-leclerc-flou");
-                            q1.classList.add("q1-active");
-                        }, 1000);
-                    }, 10000, i);
+
+                    }, 12000, i);
                 }, 6000, i);
             }, 3000, i);
         }
@@ -140,56 +135,6 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
         popd.classList.add("mauvaise-rep");
     }
 });
-
-
-document.querySelector("#MYform").addEventListener("submit", function (event) {
-    event.preventDefault(); // Empêche l'envoi du formulaire par défaut
-
-    // Récupération de la réponse de l'utilisateur
-    var reponseUtilisateur = document.getElementById("reponseInput").value;
-
-    // Vérification de la réponse
-    const popd = document.getElementById("popd");
-    if (reponseUtilisateur.toLowerCase() === "ferrari") {
-        devinette.classList.remove("devinette-active");
-        for (var i = 0; i < charles.length; i++) {
-            charles[i].classList.toggle("charles-active");
-            setTimeout((index) => {
-                charles[index].classList.remove("charles-active");
-                etoileentiere2.classList.add("etoile-entiere-2-active");
-                johnny.classList.add("johnny-image-active");
-                salut.classList.add("salut-active");
-                setTimeout((index) => {
-                    johnny.classList.remove("johnny-image-active");
-                    johnny.classList.add("johnny-image-active2");
-                    salut.classList.remove("salut-active");
-                    metroid.classList.add("metroid-active");
-                    poulpe.classList.add("poulpe-active");
-                    setTimeout((index) => {
-                        poulpe.classList.remove("poulpe-active");
-                        poulpe1.classList.add("poulpe1-active");
-                    }, 5000, i);
-                    setTimeout((index) => {
-                        photoleclerc.classList.add("photo-leclerc-active");
-                        setTimeout((index) => {
-                            photoleclerc.classList.add("photo-leclerc-flou");
-                            q1.classList.add("q1-active");
-                        }, 1000);
-                    }, 10000, i);
-                }, 6000, i);
-            }, 3000, i);
-        }
-
-        popd.innerText = "Bonne réponse !!!";
-        popd.classList.add("bonne-rep");
-        popd.classList.remove("mauvaise-rep");
-    } else {
-        popd.innerText = "Mauvaise réponse! Veuillez réessayer.";
-        popd.classList.add("mauvaise-rep");
-    }
-});
-
-
 
 
 

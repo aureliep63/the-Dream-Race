@@ -11,8 +11,9 @@ body {
   background-size: 84vw;
   background-repeat: no-repeat;
   background-position: top;
-  height: 721px;
   position: relative;
+  height: 721px;
+
 }
 
 .bg-chateau {
@@ -125,7 +126,7 @@ body {
   left: 300px;
   bottom: 128px;
   transform: rotate(22deg);
-  z-index: 2;
+  z-index: 1;
 }
 
 .ferrari-arriere:focus {
@@ -142,6 +143,7 @@ body {
   opacity: 1;
   z-index: 0;
   animation: sparkle 0.5s infinite;
+
 
 }
 
@@ -276,6 +278,7 @@ li:hover {
   line-height: 50px;
   font-size: 1px;
   transition: 4s ease-in-out;
+  z-index: 10;
 }
 
 
@@ -515,21 +518,14 @@ li:hover {
 
 .toutes-les-questions {
   text-align: center;
-}
-
-.photo-leclerc-flou {
-  filter: blur(18px);
-  transition: 1s ease-in-out;
-}
-
-.toutes-les-questions {
-  text-align: center;
   z-index: 5;
   position: absolute;
   display: flex;
   flex-direction: column;
   left: 465px;
   bottom: 135px;
+  opacity: 0;
+  pointer-events: none;
 
 }
 
@@ -548,4 +544,36 @@ li:hover {
 .q1-active {
   opacity: 1;
   pointer-events: all;
+}
+
+.q1,
+.q2,
+.q3 {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.q1-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.pop1 {
+  opacity: 1;
+}
+
+.q1,
+.q2,
+.q3 {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.q1-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.pop1 {
+  opacity: 1;
 }
