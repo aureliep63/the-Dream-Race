@@ -349,9 +349,9 @@ li:hover {
 }
 
 #MYform button,
-#ma-question-1,
-#ma-question-2,
-#ma-question-3 {
+#ma-question-1 button,
+#ma-question-2 button,
+#ma-question-3 button {
   cursor: pointer;
   background-color: yellow;
   padding: 10px;
@@ -466,7 +466,7 @@ li:hover {
   left: 243px;
   bottom: 1px;
   opacity: 0;
-  Transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
   pointer-events: none;
 }
 
@@ -506,4 +506,9 @@ li:hover {
 
 .toute-les-questions {
   text-align: center;
+}
+
+.photo-leclerc-flou {
+  filter: blur(18px);
+  transition: 1s ease-in-out;
 }

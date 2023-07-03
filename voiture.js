@@ -121,6 +121,11 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     }, 5000, i);
                     setTimeout((index) => {
                         photoleclerc.classList.add("photo-leclerc-active");
+                        setTimeout((index) => {
+                            photoleclerc.classList.add("photo-leclerc-flou");
+
+
+                        }, 10000, i);
                     }, 12000, i);
                 }, 6000, i);
             }, 3000, i);
@@ -131,6 +136,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
         popd.classList.remove("mauvaise-rep");
     } else {
         popd.innerText = "Mauvaise réponse! Veuillez réessayer.";
+
         popd.classList.add("mauvaise-rep");
     }
 });
