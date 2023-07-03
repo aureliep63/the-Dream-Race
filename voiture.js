@@ -144,6 +144,8 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
 
 var question1 = document.querySelector("#question-1");
 var etoileentiere3 = document.querySelector(".etoile-entiere-3");
+var q2 = document.querySelector(".q2");
+
 
 document.querySelector("#ma-question-1").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -178,8 +180,15 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
         question1.innerText = "Mauvaise réponse! Veuillez réessayer.";
         question1.classList.add("mauvaise-rep");
     };
+    q1.classList.remove("q1-active");
+    photoleclerc.classList.remove("photo-leclerc-flou");
+    setTimeout((index) => {
+        photoleclerc.classList.add("photo-leclerc-active");
+        setTimeout((index) => {
+            photoleclerc.classList.add("photo-leclerc-flou");
+            q2.classList.add("q2-active");
+
+        }, 10000, i);
+
+    }, 10000, i);
 });
-
-
-
-
