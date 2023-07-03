@@ -142,6 +142,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
 });
 
 var question1 = document.querySelector("#question-1");
+var etoileentiere3 = document.querySelector(".etoile-entiere-3");
 
 document.querySelector("#ma-question-1").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -161,6 +162,7 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
             }, 2000, i);
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
+                etoileentiere3.classList.add("etoile-entiere-3-active");
             }, 4000, i)
 
 
