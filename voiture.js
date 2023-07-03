@@ -91,6 +91,7 @@ var metroid = document.querySelector(".metroid");
 var poulpe = document.querySelector(".poulpe");
 var photoleclerc = document.querySelector(".photo-leclerc");
 var poulpe1 = document.querySelector(".poulpe1");
+var q1 = document.querySelector(".q1");
 
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -121,8 +122,12 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     }, 5000, i);
                     setTimeout((index) => {
                         photoleclerc.classList.add("photo-leclerc-active");
+                        setTimeout((index) => {
+                            photoleclerc.classList.add("photo-leclerc-flou");
+                            q1.classList.add("q1-active");
 
-                    }, 12000, i);
+                        }, 10000, i);
+                    }, 10000, i);
                 }, 6000, i);
             }, 3000, i);
         };
@@ -136,6 +141,34 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
     }
 });
 
+var question1 = document.querySelector("#question-1")
+document.querySelector("#ma-question-1").addEventListener("submit", function (event) {
+    event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+    // Récupération de la réponse de l'utilisateur
+    var reponseUtilisateur = document.getElementById("reponseInput1").value;
+
+    // Vérification de la réponse
+    const pop1 = document.getElementById("pop1");
+    if (reponseUtilisateur.toLowerCase() === "17") {
+        q1.classList.remove("q1-active");
+        for (var i = 0; i < charles.length; i++) {
+            charles[i].classList.toggle("charles-active");
+            setTimeout((index) => {
+                charles[index].classList.remove("charles-active");
+                photoleclerc.classList.remove("photo-leclerc-active");
+            }, 3000, i);
+
+        }
+        question1.innerText = "Bonne réponse !!!";
+        question1.classList.add("bonne-rep");
+        question1.classList.remove("mauvaise-rep");
+
+    } else {
+        question1.innerText = "Mauvaise réponse! Veuillez réessayer.";
+        question1.classList.add("mauvaise-rep");
+    }
+});
 
 
 
