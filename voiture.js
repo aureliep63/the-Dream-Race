@@ -92,6 +92,7 @@ var poulpe = document.querySelector(".poulpe");
 var photoleclerc = document.querySelector(".photo-leclerc");
 var poulpe1 = document.querySelector(".poulpe1");
 var q1 = document.querySelector(".q1");
+var johnnyface = document.querySelector(".johnny-face");
 
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -108,10 +109,10 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
                 etoileentiere2.classList.add("etoile-entiere-2-active");
-                johnny.classList.add("johnny-image-active");
+                johnnyface.classList.add("johnny-face-active");
                 salut.classList.add("salut-active");
                 setTimeout((index) => {
-                    johnny.classList.remove("johnny-image-active");
+                    johnnyface.classList.remove("johnny-face-active");
                     johnny.classList.add("johnny-image-active2");
                     salut.classList.remove("salut-active");
                     metroid.classList.add("metroid-active");
@@ -141,7 +142,9 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
     }
 });
 
-var question1 = document.querySelector("#question-1")
+var question1 = document.querySelector("#question-1");
+var etoileentiere3 = document.querySelector(".etoile-entiere-3");
+
 document.querySelector("#ma-question-1").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
 
@@ -149,17 +152,24 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
     var reponseUtilisateur = document.getElementById("reponseInput1").value;
 
     // Vérification de la réponse
-    const pop1 = document.getElementById("pop1");
+
     if (reponseUtilisateur.toLowerCase() === "17") {
-        q1.classList.remove("q1-active");
+
+
         for (var i = 0; i < charles.length; i++) {
             charles[i].classList.toggle("charles-active");
             setTimeout((index) => {
-                charles[index].classList.remove("charles-active");
-                photoleclerc.classList.remove("photo-leclerc-active");
-            }, 3000, i);
 
-        }
+                q1.classList.remove("q1-active");
+                photoleclerc.classList.remove("photo-leclerc-active");
+            }, 2000, i);
+            setTimeout((index) => {
+                charles[index].classList.remove("charles-active");
+                etoileentiere3.classList.add("etoile-entiere-3-active");
+            }, 4000, i);
+
+
+        };
         question1.innerText = "Bonne réponse !!!";
         question1.classList.add("bonne-rep");
         question1.classList.remove("mauvaise-rep");
@@ -167,7 +177,7 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
     } else {
         question1.innerText = "Mauvaise réponse! Veuillez réessayer.";
         question1.classList.add("mauvaise-rep");
-    }
+    };
 });
 
 
