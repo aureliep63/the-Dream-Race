@@ -177,9 +177,8 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
     } else {
         question1.innerText = "Mauvaise réponse! Veuillez réessayer.";
         question1.classList.add("mauvaise-rep");
-        question1.classList.remove("q1-active");
-        question1.style.display = "none";
     };
+    question1.classListremove("question-active");
 });
 
 
