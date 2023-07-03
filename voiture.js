@@ -159,9 +159,14 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
         for (var i = 0; i < charles.length; i++) {
             charles[i].classList.toggle("charles-active");
             setTimeout((index) => {
-                charles[index].classList.remove("charles-active");
+
+                q1.classList.remove("q1-active");
                 photoleclerc.classList.remove("photo-leclerc-active");
-            }, 3000, i);
+            }, 2000, i);
+            setTimeout((index) => {
+                charles[index].classList.remove("charles-active");
+                etoileentiere3.classList.add("etoile-entiere-3-active");
+            }, 4000, i);
 
 
         };
@@ -169,14 +174,13 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
         question1.classList.add("bonne-rep");
         question1.classList.remove("mauvaise-rep");
 
-
-
     } else {
         question1.innerText = "Mauvaise réponse! Veuillez réessayer.";
         question1.classList.add("mauvaise-rep");
+        question1.classList.remove("q1-active");
+        question1.style.display = "none";
     };
 });
-
 
 
 

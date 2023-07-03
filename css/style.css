@@ -331,8 +331,7 @@ li:hover {
   top: 321px;
 }
 
-.etoile-entiere-2-active,
-.etoile-entiere-3-active {
+.etoile-entiere-2-active {
   opacity: 1;
   animation: sparkle 2s infinite;
 }
@@ -399,7 +398,15 @@ li:hover {
   transition: 1s ease-in-out;
 }
 
-
+.johnny-image {
+  display: inline-block;
+  width: 120px;
+  position: absolute;
+  left: 503px;
+  opacity: 0;
+  bottom: 3px;
+  transition: 1s ease-in-out;
+}
 
 .salut p {
   padding: 10px;
@@ -522,7 +529,7 @@ li:hover {
 .display-inline-block {
   display: inline-block;
   border-radius: 15px;
-  background-color: #580202;
+  background-color: red;
   padding: 15px;
   line-height: 50px;
   margin: 15px;
@@ -575,16 +582,4 @@ li:hover {
 
   opacity: 1;
   animation: sparkle 2s infinite;
-}
-
-.etoile-entiere-3 {
-  position: absolute;
-  width: 68px;
-  bottom: 214px;
-  left: 30px;
-  opacity: 0;
-}
-
-.etoile-entiere-3-active {
-  opacity: 1;
 }
