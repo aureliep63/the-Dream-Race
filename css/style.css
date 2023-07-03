@@ -85,6 +85,7 @@ body {
   height: 300px;
   transition: 1s ease-in-out;
   pointer-events: none;
+
 }
 
 .petitetoile {
@@ -349,9 +350,9 @@ li:hover {
 }
 
 #MYform button,
-#ma-question-1,
-#ma-question-2,
-#ma-question-3 {
+#ma-question-1 button,
+#ma-question-2 button,
+#ma-question-3 button {
   cursor: pointer;
   background-color: yellow;
   padding: 10px;
@@ -502,8 +503,32 @@ li:hover {
 
 .display-inline-block {
   display: inline-block;
+  border-radius: 15px;
+  background-color: #580202;
+  padding: 15px;
+  line-height: 50px;
+  margin: 15px;
 }
 
-.toute-les-questions {
+.toutes-les-questions {
   text-align: center;
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 465px;
+  bottom: 135px;
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+.display-inline-block p {
+  color: yellow;
+  font-size: x-large;
+}
+
+.photo-leclerc-flou {
+  filter: blur(18px);
+  transition: 1s ease-in-out;
 }
