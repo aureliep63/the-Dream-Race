@@ -141,7 +141,8 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
     }
 });
 
-var question1 = document.querySelector("#question-1")
+var question1 = document.querySelector("#question-1");
+
 document.querySelector("#ma-question-1").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
 
@@ -151,18 +152,23 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
     // Vérification de la réponse
     const pop1 = document.getElementById("pop1");
     if (reponseUtilisateur.toLowerCase() === "17") {
-        q1.classList.remove("q1-active");
+
         for (var i = 0; i < charles.length; i++) {
             charles[i].classList.toggle("charles-active");
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
-                photoleclerc.classList.remove("photo-leclerc-active");
-            }, 3000, i);
+                q1.classList.remove("q1-active");
+                setTimeout((index) => {
+                    photoleclerc.classList.remove("photo-leclerc-active");
+                }, 3000, i);
+            }, 7000, i);
 
         }
         question1.innerText = "Bonne réponse !!!";
         question1.classList.add("bonne-rep");
         question1.classList.remove("mauvaise-rep");
+
+
 
     } else {
         question1.innerText = "Mauvaise réponse! Veuillez réessayer.";
