@@ -147,7 +147,7 @@ var etoileentiere3 = document.querySelector(".etoile-entiere-3");
 var q2 = document.querySelector(".q2");
 
 
-document.querySelector("#ma-question-1").addEventListener("submit", function (event) {
+document.querySelector("#ma-question-1,#ma-question-2,#ma-question-3 ").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
 
     // Récupération de la réponse de l'utilisateur
@@ -172,23 +172,23 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
 
 
         };
-        question1.innerText = "Bonne réponse !!!";
-        question1.classList.add("bonne-rep");
-        question1.classList.remove("mauvaise-rep");
+        q1.innerText = "Bonne réponse !!!";
+        q1.classList.add("bonne-rep");
+        q1.classList.remove("mauvaise-rep");
 
     } else {
-        question1.innerText = "Mauvaise réponse! Veuillez réessayer.";
-        question1.classList.add("mauvaise-rep");
-    };
-    q1.classList.remove("q1-active");
-    photoleclerc.classList.remove("photo-leclerc-flou");
-    setTimeout((index) => {
-        photoleclerc.classList.add("photo-leclerc-active");
+        q1.innerText = "Mauvaise réponse! Veuillez réessayer.";
+        q1.classList.add("mauvaise-rep"); q1.classList.remove("q1-active");
+        photoleclerc.classList.remove("photo-leclerc-flou");
         setTimeout((index) => {
-            photoleclerc.classList.add("photo-leclerc-flou");
-            q2.classList.add("q2-active");
+            photoleclerc.classList.add("photo-leclerc-active");
+            setTimeout((index) => {
+                photoleclerc.classList.add("photo-leclerc-flou");
+                q2.classList.add("q2-active");
+
+            }, 10000, i);
 
         }, 10000, i);
+    };
 
-    }, 10000, i);
 });
