@@ -348,7 +348,10 @@ li:hover {
   }
 }
 
-#MYform button {
+#MYform button,
+#ma-question-1,
+#ma-question-2,
+#ma-question-3 {
   cursor: pointer;
   background-color: yellow;
   padding: 10px;
@@ -495,4 +498,12 @@ li:hover {
 .poulpe1-active {
   opacity: 1;
   transition: 3s ease-in-out;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.toute-les-questions {
+  text-align: center;
 }
