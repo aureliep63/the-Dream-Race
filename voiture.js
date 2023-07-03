@@ -92,6 +92,7 @@ var poulpe = document.querySelector(".poulpe");
 var photoleclerc = document.querySelector(".photo-leclerc");
 var poulpe1 = document.querySelector(".poulpe1");
 var q1 = document.querySelector(".q1");
+var johnnyface = document.querySelector(".johnny-face");
 
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -108,10 +109,10 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
                 etoileentiere2.classList.add("etoile-entiere-2-active");
-                johnny.classList.add("johnny-image-active");
+                johnnyface.classList.add("johnny-face-active");
                 salut.classList.add("salut-active");
                 setTimeout((index) => {
-                    johnny.classList.remove("johnny-image-active");
+                    johnnyface.classList.remove("johnny-face-active");
                     johnny.classList.add("johnny-image-active2");
                     salut.classList.remove("salut-active");
                     metroid.classList.add("metroid-active");
@@ -154,19 +155,16 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
 
     if (reponseUtilisateur.toLowerCase() === "17") {
 
+
         for (var i = 0; i < charles.length; i++) {
             charles[i].classList.toggle("charles-active");
             setTimeout((index) => {
-                photoleclerc.classList.remove("photo-leclerc-active");
-                q1.classList.remove("q1-active");
-            }, 2000, i);
-            setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
-                etoileentiere3.classList.add("etoile-entiere-3-active");
-            }, 4000, i)
+                photoleclerc.classList.remove("photo-leclerc-active");
+            }, 3000, i);
 
 
-        }
+        };
         question1.innerText = "Bonne réponse !!!";
         question1.classList.add("bonne-rep");
         question1.classList.remove("mauvaise-rep");
@@ -176,7 +174,7 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
     } else {
         question1.innerText = "Mauvaise réponse! Veuillez réessayer.";
         question1.classList.add("mauvaise-rep");
-    }
+    };
 });
 
 

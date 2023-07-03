@@ -114,6 +114,8 @@ body {
   transition: 2s ease-in-out;
   width: 40%;
 
+
+
 }
 
 .charles-center {
@@ -164,6 +166,7 @@ body {
 .charles-active {
   opacity: 1;
   transition: 2s ease-in-out;
+  z-index: 11;
 
 }
 
@@ -379,12 +382,12 @@ li:hover {
 
 .salut {
   position: absolute;
-  left: 600pX;
+  left: 623pX;
   background-color: whitesmoke;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 13% 100%, 50% 75%, 0% 75%);
   height: 123px;
   line-height: 22px;
-  bottom: 194px;
+  bottom: 122px;
   opacity: 0;
   display: inline-block;
   pointer-events: none;
@@ -402,8 +405,24 @@ li:hover {
   padding: 10px;
 }
 
-.johnny-image-active {
+.johnny-face {
+  display: inline-block;
+  width: 187px;
+  position: absolute;
+  left: 503px;
+  opacity: 0;
+  bottom: -2px;
+  transition: 1s ease-in-out;
+
+}
+
+.johnny-face-active {
   opacity: 1;
+  transition: 1s ease-in-out;
+}
+
+.johnny-image-active {
+  opacity: 0;
   transition: 1s ease-in-out;
 
 }
@@ -503,7 +522,7 @@ li:hover {
 .display-inline-block {
   display: inline-block;
   border-radius: 15px;
-  background-color: #ff0000;
+  background-color: #580202;
   padding: 15px;
   line-height: 50px;
   margin: 15px;
@@ -527,6 +546,7 @@ li:hover {
 .photo-leclerc-flou {
   filter: blur(18px);
   transition: 1s ease-in-out;
+  z-index: 4;
 }
 
 .q1,
@@ -534,6 +554,7 @@ li:hover {
 .q3 {
   opacity: 0;
   pointer-events: none;
+
 }
 
 .q1-active {
@@ -541,8 +562,19 @@ li:hover {
   pointer-events: all;
 }
 
-.pop1 {
+.etoile-entiere-3 {
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  width: 68px;
+  left: 31px;
+  top: 424px;
+}
+
+.etoile-entiere-3-active {
+
   opacity: 1;
+  animation: sparkle 2s infinite;
 }
 
 .etoile-entiere-3 {
