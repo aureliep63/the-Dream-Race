@@ -150,18 +150,19 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
     var reponseUtilisateur = document.getElementById("reponseInput1").value;
 
     // Vérification de la réponse
-    const pop1 = document.getElementById("pop1");
+
     if (reponseUtilisateur.toLowerCase() === "17") {
 
         for (var i = 0; i < charles.length; i++) {
             charles[i].classList.toggle("charles-active");
             setTimeout((index) => {
-                charles[index].classList.remove("charles-active");
+                photoleclerc.classList.remove("photo-leclerc-active");
                 q1.classList.remove("q1-active");
-                setTimeout((index) => {
-                    photoleclerc.classList.remove("photo-leclerc-active");
-                }, 3000, i);
-            }, 7000, i);
+            }, 2000, i);
+            setTimeout((index) => {
+                charles[index].classList.remove("charles-active");
+            }, 4000, i)
+
 
         }
         question1.innerText = "Bonne réponse !!!";
