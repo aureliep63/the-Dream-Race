@@ -85,6 +85,7 @@ body {
   height: 300px;
   transition: 1s ease-in-out;
   pointer-events: none;
+
 }
 
 .petitetoile {
@@ -502,9 +503,14 @@ li:hover {
 
 .display-inline-block {
   display: inline-block;
+  border-radius: 15px;
+  background-color: #580202;
+  padding: 15px;
+  line-height: 50px;
+  margin: 15px;
 }
 
-.toute-les-questions {
+.toutes-les-questions {
   text-align: center;
 }
 
