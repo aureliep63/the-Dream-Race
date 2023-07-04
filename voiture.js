@@ -202,20 +202,19 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
         question1.classList.add("mauvaise-rep");
         setTimeout(() => {
             q1.classList.remove("q1-active");
+            tictac.play();
+            tictac.loop = true;
             photoleclerc.classList.remove("photo-leclerc-flou");
         }, 4000, i);
-
         setTimeout((index) => {
             photoleclerc.classList.add("photo-leclerc-active");
             setTimeout((index) => {
                 photoleclerc.classList.add("photo-leclerc-flou");
+                tictac.pause();
                 q2.classList.add("q2-active");
-
             }, 6000, i);
-
         }, 10000, i);
     };
-
 });
 
 var question2 = document.querySelector("#question-2")
@@ -270,8 +269,12 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
         }, 4000, i);
 
         setTimeout((index) => {
+            tictac.play();
+            tictac.loop = true;
             photoleclerc.classList.add("photo-leclerc-active");
+
             setTimeout((index) => {
+                tictac.pause();
                 photoleclerc.classList.add("photo-leclerc-flou");
                 q3.classList.add("q3-active");
 
