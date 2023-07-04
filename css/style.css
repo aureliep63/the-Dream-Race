@@ -643,3 +643,11 @@ li:hover {
   font-size: 99px;
   animation: sparkle 0.5s infinite;
 }
+
+.etoilefin {
+  width: 70px;
+}
+
+.fin-fin {
+  padding: 10px;
+}

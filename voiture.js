@@ -243,6 +243,9 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
                 charles[index].classList.remove("charles-active");
                 etoileentiere3.classList.add("etoile-entiere-3-active");
             }, 2000, i);
+            setTimeout((index) => {
+                fin.classList.add("fin-active");
+            }, 5000, i);
 
 
         };
@@ -304,6 +307,9 @@ document.querySelector("#ma-question-3").addEventListener("submit", function (ev
                 charles[index].classList.remove("charles-active");
                 etoileentiere3.classList.add("etoile-entiere-3-active");
             }, 2000, i);
+            setTimeout((index) => {
+                fin.classList.add("fin-active");
+            }, 5000, i);
 
 
         };
