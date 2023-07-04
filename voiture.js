@@ -265,17 +265,15 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
         question2.classList.add("mauvaise-rep");
         setTimeout(() => {
             q2.classList.remove("q2-active");
-            photoleclerc.classList.remove("photo-leclerc-flou");
-        }, 4000, i);
-
-        setTimeout((index) => {
             tictac.play();
             tictac.loop = true;
+            photoleclerc.classList.remove("photo-leclerc-flou");
+        }, 4000, i);
+        setTimeout((index) => {
             photoleclerc.classList.add("photo-leclerc-active");
-
             setTimeout((index) => {
-                tictac.pause();
                 photoleclerc.classList.add("photo-leclerc-flou");
+                tictac.pause();
                 q3.classList.add("q3-active");
 
             }, 6000, i);
