@@ -6,12 +6,14 @@ var question = document.getElementsByClassName('question')[0];
 var ferraridevant = document.getElementsByClassName('ferrari-devant')[0];
 var explication = document.querySelector('.explication');
 
-
+const clap = new Audio('image/clap.wav');
 
 document.querySelectorAll(".ferrari-arriere").forEach(voiture => {
     voiture.addEventListener("click", () => {
         voiture.classList.toggle("ferrari-arriere-active");
         explication.classList.add("explication-active");
+        clap.play();
+        clap.loop = true;
     });
 });
 
@@ -110,6 +112,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
                 etoileentiere2.classList.add("etoile-entiere-2-active");
+                clap.pause();
                 johnnyface.classList.add("johnny-face-active");
                 salut.classList.add("salut-active");
                 setTimeout((index) => {
