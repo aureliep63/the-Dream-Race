@@ -633,7 +633,6 @@ li:hover {
 }
 
 .fin p {
-  margin-top: 100px;
   padding: 0 20px;
   text-align: center;
   font-size: 30px;
@@ -642,4 +641,13 @@ li:hover {
 .fin p b {
   font-size: 99px;
   animation: sparkle 0.5s infinite;
+}
+
+.etoile-fin {
+  width: 70px;
+}
+
+.fin-fin {
+  text-align: center;
+  margin: 15px 0;
 }
