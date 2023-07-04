@@ -373,7 +373,9 @@ li:hover {
   text-shadow: 2px 1px black;
 }
 
-.mauvaise-rep {
+.mauvaise-rep,
+#recommence-1,
+#recommence-2 {
   color: rgb(79, 18, 18);
   text-shadow: 2px 1px black;
   font-size: xx-large;

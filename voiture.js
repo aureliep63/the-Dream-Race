@@ -145,7 +145,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
 var question1 = document.querySelector("#question-1");
 var etoileentiere3 = document.querySelector(".etoile-entiere-3");
 var q2 = document.querySelector(".q2");
-
+var recommence1 = document.querySelector("#recommence-1");
 
 document.querySelector("#ma-question-1").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -177,12 +177,13 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
         q1.classList.remove("mauvaise-rep");
 
     } else {
-        question1.innerText = "Mauvaise réponse! Veuillez réessayer.";
+        question1.innerText = "Mauvaise réponse! Veuillez réessayer";
+        recommence1.innerText = "La photo revient pour 10s !!!";
         question1.classList.add("mauvaise-rep");
         setTimeout(() => {
             q1.classList.remove("q1-active");
             photoleclerc.classList.remove("photo-leclerc-flou");
-        }, 2000, i);
+        }, 4000, i);
 
         setTimeout((index) => {
             photoleclerc.classList.add("photo-leclerc-active");
@@ -199,6 +200,8 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
 
 var question2 = document.querySelector("#question-2")
 var q3 = document.querySelector(".q3");
+var recommence2 = document.querySelector("#recommence-2");
+
 
 document.querySelector("#ma-question-2").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -231,11 +234,12 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
 
     } else {
         question2.innerText = "Mauvaise réponse! Veuillez réessayer.";
+        recommence2.innerText = "La photo revient pour 10s !!!";
         question2.classList.add("mauvaise-rep");
         setTimeout(() => {
             q2.classList.remove("q2-active");
             photoleclerc.classList.remove("photo-leclerc-flou");
-        }, 2000, i);
+        }, 4000, i);
 
         setTimeout((index) => {
             photoleclerc.classList.add("photo-leclerc-active");
@@ -250,4 +254,59 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
 
 });
 
+
+var recommence3 = document.querySelector("#recommence-3");
+
+
+document.querySelector("#ma-question-3").addEventListener("submit", function (event) {
+    event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+    // Récupération de la réponse de l'utilisateur
+    var reponseUtilisateur = document.getElementById("reponseInput3").value;
+
+    // Vérification de la réponse
+
+    if (reponseUtilisateur.toLowerCase() === "cheval") {
+
+
+        for (var i = 0; i < charles.length; i++) {
+            charles[i].classList.toggle("charles-active");
+            setTimeout((index) => {
+
+                q3.classList.remove("q3-active");
+                photoleclerc.classList.remove("photo-leclerc-active");
+            }, 2000, i);
+            setTimeout((index) => {
+                charles[index].classList.remove("charles-active");
+                etoileentiere3.classList.add("etoile-entiere-3-active");
+            }, 4000, i);
+
+
+        };
+        q3.innerText = "Bonne réponse !!!";
+        q3.classList.add("bonne-rep");
+        q3.classList.remove("mauvaise-rep");
+
+    } else {
+        question3.innerText = "Mauvaise réponse! Veuillez réessayer.";
+        recommence3.innerText = "La photo revient pour 10s !!!";
+        question3.classList.add("mauvaise-rep");
+        setTimeout(() => {
+            q3.classList.remove("q3-active");
+            photoleclerc.classList.remove("photo-leclerc-flou");
+        }, 4000, i);
+
+        setTimeout((index) => {
+            photoleclerc.classList.add("photo-leclerc-active");
+            setTimeout((index) => {
+                photoleclerc.classList.add("photo-leclerc-flou");
+
+
+
+            }, 8000, i);
+
+        }, 10000, i);
+    };
+
+});
 
