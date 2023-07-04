@@ -51,6 +51,7 @@ reponses.forEach(reponse => {
                     ferraricote.classList.remove("ferrari-cote-active");
                     etoileentiere1.classList.add("etoile-entiere-1-active");
 
+
                     ferraridevant.classList.add("ferrari-devant-active");
 
 
@@ -59,7 +60,7 @@ reponses.forEach(reponse => {
                         setTimeout((index) => {
                             charles[index].classList.remove("charles-active");
                             devinette.classList.add("devinette-active");
-                            etoileg.classList.remove("etoile-coupe-gauche-active");
+
                         }, 2000, i);
 
                     };
@@ -166,6 +167,7 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
                 photoleclerc.classList.remove("photo-leclerc-active");
                 metroid.classList.remove("metroid-active");
                 poulpe1.classList.remove("poulpe1-active");
+
                 setTimeout((index) => {
                     johnny.classList.remove("johnny-image-active2");
                     johnny.classList.add("johnny-image-active3");
