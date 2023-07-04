@@ -98,6 +98,7 @@ var q1 = document.querySelector(".q1");
 var johnnyface = document.querySelector(".johnny-face");
 const tictac = new Audio('image/tic-tac.wav');
 
+
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
 
@@ -120,8 +121,10 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     johnnyface.classList.remove("johnny-face-active");
                     johnny.classList.add("johnny-image-active2");
                     salut.classList.remove("salut-active");
+
                     metroid.classList.add("metroid-active");
                     poulpe.classList.add("poulpe-active");
+
                     setTimeout((index) => {
                         poulpe.classList.remove("poulpe-active");
                         poulpe1.classList.add("poulpe1-active");
