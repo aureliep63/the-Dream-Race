@@ -247,7 +247,6 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
                 fin.classList.add("fin-active");
             }, 5000, i);
 
-
         };
         q2.innerText = "Bonne réponse !!!";
         q2.classList.add("bonne-rep");
