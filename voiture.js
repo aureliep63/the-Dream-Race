@@ -177,10 +177,13 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
         q1.classList.remove("mauvaise-rep");
 
     } else {
-        q1.innerText = "Mauvaise réponse! Veuillez réessayer.";
-        q1.classList.add("mauvaise-rep");
-        q1.classList.remove("q1-active");
-        photoleclerc.classList.remove("photo-leclerc-flou");
+        question1.innerText = "Mauvaise réponse! Veuillez réessayer.";
+        question1.classList.add("mauvaise-rep");
+        setTimeout(() => {
+            q1.classList.remove("q1-active");
+            photoleclerc.classList.remove("photo-leclerc-flou");
+        }, 2000, i);
+
         setTimeout((index) => {
             photoleclerc.classList.add("photo-leclerc-active");
             setTimeout((index) => {
