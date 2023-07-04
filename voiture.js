@@ -164,6 +164,9 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
 
                 q1.classList.remove("q1-active");
                 photoleclerc.classList.remove("photo-leclerc-active");
+                metroid.classList.remove("metroid-active");
+                poulpe1.classList.remove("poulpe1-active");
+
             }, 2000, i);
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
@@ -191,7 +194,7 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
                 photoleclerc.classList.add("photo-leclerc-flou");
                 q2.classList.add("q2-active");
 
-            }, 8000, i);
+            }, 6000, i);
 
         }, 10000, i);
     };
@@ -220,6 +223,8 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
 
                 q2.classList.remove("q2-active");
                 photoleclerc.classList.remove("photo-leclerc-active");
+                metroid.classList.remove("metroid-active");
+                poulpe1.classList.remove("poulpe1-active");
             }, 2000, i);
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
@@ -247,7 +252,7 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
                 photoleclerc.classList.add("photo-leclerc-flou");
                 q3.classList.add("q3-active");
 
-            }, 8000, i);
+            }, 6000, i);
 
         }, 10000, i);
     };
@@ -255,7 +260,8 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
 });
 
 
-var recommence3 = document.querySelector("#recommence-3");
+
+var question3 = document.querySelector("#question-3");
 
 
 document.querySelector("#ma-question-3").addEventListener("submit", function (event) {
@@ -272,9 +278,10 @@ document.querySelector("#ma-question-3").addEventListener("submit", function (ev
         for (var i = 0; i < charles.length; i++) {
             charles[i].classList.toggle("charles-active");
             setTimeout((index) => {
-
                 q3.classList.remove("q3-active");
                 photoleclerc.classList.remove("photo-leclerc-active");
+                metroid.classList.remove("metroid-active");
+                poulpe1.classList.remove("poulpe1-active");
             }, 2000, i);
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
@@ -289,24 +296,7 @@ document.querySelector("#ma-question-3").addEventListener("submit", function (ev
 
     } else {
         question3.innerText = "Mauvaise réponse! Veuillez réessayer.";
-        recommence3.innerText = "La photo revient pour 10s !!!";
         question3.classList.add("mauvaise-rep");
-        setTimeout(() => {
-            q3.classList.remove("q3-active");
-            photoleclerc.classList.remove("photo-leclerc-flou");
-        }, 4000, i);
-
-        setTimeout((index) => {
-            photoleclerc.classList.add("photo-leclerc-active");
-            setTimeout((index) => {
-                photoleclerc.classList.add("photo-leclerc-flou");
-
-
-
-            }, 8000, i);
-
-        }, 10000, i);
     };
 
 });
-
