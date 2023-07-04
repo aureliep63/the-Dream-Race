@@ -615,37 +615,31 @@ li:hover {
   pointer-events: all;
 }
 
-.etoile-entiere-1-active1 {
-  opacity: 1;
-  animation: sparkle 2s infinite;
-  width: 143px;
+.fin {
   position: absolute;
-  left: 337px;
-  top: 45px;
-  z-index: 15;
-}
-
-.etoile-entiere-2-active2 {
-  opacity: 1;
-  animation: sparkle 2s infinite;
-  width: 143px;
-  position: absolute;
-  left: 576px;
-  top: 49px;
-  z-index: 15;
-}
-
-.etoile-entiere-3-active3 {
-  opacity: 1;
-  animation: sparkle 2s infinite;
-  width: 143px;
-  position: absolute;
-  left: 337px;
-  top: 45px;
-  z-index: 15;
-}
-
-.etoile-coupe-gauche-active1 {
+  left: 450px;
+  top: 29px;
+  font-size: large;
+  background: #ffe505;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  height: 300px;
+  transition: 1s ease-in-out;
+  pointer-events: none;
   opacity: 0;
+}
 
+.fin-active {
+  opacity: 1;
+}
+
+.fin p {
+  margin-top: 100px;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.fin p b {
+  font-size: 99px;
+  animation: sparkle 0.5s infinite;
 }

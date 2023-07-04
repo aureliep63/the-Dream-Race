@@ -1,5 +1,5 @@
 const voiture = document.getElementsByClassName('ferrari-arriere');
-var etoileg = document.getElementsByClassName('.etoile-coupe-gauche');
+var etoileg = document.getElementsByClassName('etoile-coupe-gauche');
 var charles = document.getElementsByClassName('charles');
 var ferraricote = document.getElementsByClassName('ferrari-cote')[0];
 var question = document.getElementsByClassName('question')[0];
@@ -146,6 +146,7 @@ var question1 = document.querySelector("#question-1");
 var etoileentiere3 = document.querySelector(".etoile-entiere-3");
 var q2 = document.querySelector(".q2");
 var recommence1 = document.querySelector("#recommence-1");
+var fin = document.querySelector(".fin");
 
 document.querySelector("#ma-question-1").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -175,6 +176,9 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
                 charles[index].classList.remove("charles-active");
                 etoileentiere3.classList.add("etoile-entiere-3-active");
             }, 2000, i);
+            setTimeout((index) => {
+                fin.classList.add("fin-active");
+            }, 5000, i);
 
 
         };
