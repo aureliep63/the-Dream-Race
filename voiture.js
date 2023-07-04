@@ -189,6 +189,9 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
             setTimeout((index) => {
                 fin.classList.add("fin-active");
             }, 5000, i);
+            setTimeout((index) => {
+                window.location.href = 'https://www.new-men-upgraders.fr/';
+            }, 7000, i);
 
 
         };
@@ -253,6 +256,9 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
             setTimeout((index) => {
                 fin.classList.add("fin-active");
             }, 5000, i);
+            setTimeout((index) => {
+                window.location.href = 'https://www.new-men-upgraders.fr/';
+            }, 7000, i);
 
         };
         q2.innerText = "Bonne réponse !!!";
@@ -318,7 +324,9 @@ document.querySelector("#ma-question-3").addEventListener("submit", function (ev
             setTimeout((index) => {
                 fin.classList.add("fin-active");
             }, 5000, i);
-
+            setTimeout((index) => {
+                window.location.href = 'https://www.new-men-upgraders.fr/';
+            }, 7000, i);
 
         };
         q3.innerText = "Bonne réponse !!!";
