@@ -96,6 +96,7 @@ var photoleclerc = document.querySelector(".photo-leclerc");
 var poulpe1 = document.querySelector(".poulpe1");
 var q1 = document.querySelector(".q1");
 var johnnyface = document.querySelector(".johnny-face");
+const tictac = new Audio('image/tic-tac.wav');
 
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -127,7 +128,10 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     }, 5000, i);
                     setTimeout((index) => {
                         photoleclerc.classList.add("photo-leclerc-active");
+                        tictac.play();
+                        tictac.loop = true;
                         setTimeout((index) => {
+                            tictac.pause();
                             photoleclerc.classList.add("photo-leclerc-flou");
                             q1.classList.add("q1-active");
 
@@ -151,6 +155,7 @@ var etoileentiere3 = document.querySelector(".etoile-entiere-3");
 var q2 = document.querySelector(".q2");
 var recommence1 = document.querySelector("#recommence-1");
 var fin = document.querySelector(".fin");
+
 
 document.querySelector("#ma-question-1").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
