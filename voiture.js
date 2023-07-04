@@ -197,6 +197,57 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
 
 });
 
+var question2 = document.querySelector("#question-2")
+var q3 = document.querySelector(".q3");
 
+document.querySelector("#ma-question-2").addEventListener("submit", function (event) {
+    event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+    // Récupération de la réponse de l'utilisateur
+    var reponseUtilisateur = document.getElementById("reponseInput2").value;
+
+    // Vérification de la réponse
+
+    if (reponseUtilisateur.toLowerCase() === "16") {
+
+
+        for (var i = 0; i < charles.length; i++) {
+            charles[i].classList.toggle("charles-active");
+            setTimeout((index) => {
+
+                q2.classList.remove("q2-active");
+                photoleclerc.classList.remove("photo-leclerc-active");
+            }, 2000, i);
+            setTimeout((index) => {
+                charles[index].classList.remove("charles-active");
+                etoileentiere3.classList.add("etoile-entiere-3-active");
+            }, 4000, i);
+
+
+        };
+        q2.innerText = "Bonne réponse !!!";
+        q2.classList.add("bonne-rep");
+        q2.classList.remove("mauvaise-rep");
+
+    } else {
+        question2.innerText = "Mauvaise réponse! Veuillez réessayer.";
+        question2.classList.add("mauvaise-rep");
+        setTimeout(() => {
+            q2.classList.remove("q2-active");
+            photoleclerc.classList.remove("photo-leclerc-flou");
+        }, 2000, i);
+
+        setTimeout((index) => {
+            photoleclerc.classList.add("photo-leclerc-active");
+            setTimeout((index) => {
+                photoleclerc.classList.add("photo-leclerc-flou");
+                q3.classList.add("q3-active");
+
+            }, 8000, i);
+
+        }, 10000, i);
+    };
+
+});
 
 
