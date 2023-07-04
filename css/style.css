@@ -202,6 +202,7 @@ body {
   left: 26px;
   top: 208px;
   z-index: 2;
+
 }
 
 
@@ -334,6 +335,7 @@ li:hover {
 .etoile-entiere-2-active {
   opacity: 1;
   animation: sparkle 2s infinite;
+  transition: 1s ease-in-out;
 }
 
 #popd {
@@ -377,6 +379,13 @@ li:hover {
 #recommence-1,
 #recommence-2 {
   color: rgb(79, 18, 18);
+  text-shadow: 2px 1px black;
+  font-size: xx-large;
+}
+
+#recommence-1,
+#recommence-2 {
+  color: yellow;
   text-shadow: 2px 1px black;
   font-size: xx-large;
 }
@@ -446,11 +455,11 @@ li:hover {
 }
 
 .johnny-image-active3 {
-  width: 108px;
+  width: 70px;
   position: absolute;
-  left: 900px;
-  opacity: 1;
-  bottom: 47px;
+  left: 971px;
+  opacity: 0;
+  bottom: 203px;
   transition: 1s ease-in-out;
 }
 
@@ -593,6 +602,7 @@ li:hover {
 
   opacity: 1;
   animation: sparkle 2s infinite;
+  transition: 1s ease-in-out;
 }
 
 .q2-active {
@@ -603,4 +613,39 @@ li:hover {
 .q3-active {
   opacity: 1;
   pointer-events: all;
+}
+
+.etoile-entiere-1-active1 {
+  opacity: 1;
+  animation: sparkle 2s infinite;
+  width: 143px;
+  position: absolute;
+  left: 337px;
+  top: 45px;
+  z-index: 15;
+}
+
+.etoile-entiere-2-active2 {
+  opacity: 1;
+  animation: sparkle 2s infinite;
+  width: 143px;
+  position: absolute;
+  left: 576px;
+  top: 49px;
+  z-index: 15;
+}
+
+.etoile-entiere-3-active3 {
+  opacity: 1;
+  animation: sparkle 2s infinite;
+  width: 143px;
+  position: absolute;
+  left: 337px;
+  top: 45px;
+  z-index: 15;
+}
+
+.etoile-coupe-gauche-active1 {
+  opacity: 0;
+
 }

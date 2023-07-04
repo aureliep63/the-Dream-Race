@@ -166,12 +166,15 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
                 photoleclerc.classList.remove("photo-leclerc-active");
                 metroid.classList.remove("metroid-active");
                 poulpe1.classList.remove("poulpe1-active");
-
+                setTimeout((index) => {
+                    johnny.classList.remove("johnny-image-active2");
+                    johnny.classList.add("johnny-image-active3");
+                }, 4000, i);
             }, 2000, i);
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
                 etoileentiere3.classList.add("etoile-entiere-3-active");
-            }, 4000, i);
+            }, 2000, i);
 
 
         };
@@ -225,11 +228,15 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
                 photoleclerc.classList.remove("photo-leclerc-active");
                 metroid.classList.remove("metroid-active");
                 poulpe1.classList.remove("poulpe1-active");
+                setTimeout((index) => {
+                    johnny.classList.remove("johnny-image-active2");
+                    johnny.classList.add("johnny-image-active3");
+                }, 4000, i);
             }, 2000, i);
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
                 etoileentiere3.classList.add("etoile-entiere-3-active");
-            }, 4000, i);
+            }, 2000, i);
 
 
         };
@@ -282,11 +289,15 @@ document.querySelector("#ma-question-3").addEventListener("submit", function (ev
                 photoleclerc.classList.remove("photo-leclerc-active");
                 metroid.classList.remove("metroid-active");
                 poulpe1.classList.remove("poulpe1-active");
+                setTimeout((index) => {
+                    johnny.classList.remove("johnny-image-active2");
+                    johnny.classList.add("johnny-image-active3");
+                }, 4000, i);
             }, 2000, i);
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
                 etoileentiere3.classList.add("etoile-entiere-3-active");
-            }, 4000, i);
+            }, 2000, i);
 
 
         };
