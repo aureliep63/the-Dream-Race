@@ -97,7 +97,7 @@ var poulpe1 = document.querySelector(".poulpe1");
 var q1 = document.querySelector(".q1");
 var johnnyface = document.querySelector(".johnny-face");
 const tictac = new Audio('image/tic-tac.wav');
-
+const vent = new Audio('image/vent.flac');
 
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -121,10 +121,8 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     johnnyface.classList.remove("johnny-face-active");
                     johnny.classList.add("johnny-image-active2");
                     salut.classList.remove("salut-active");
-
                     metroid.classList.add("metroid-active");
                     poulpe.classList.add("poulpe-active");
-
                     setTimeout((index) => {
                         poulpe.classList.remove("poulpe-active");
                         poulpe1.classList.add("poulpe1-active");
@@ -182,7 +180,9 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
 
                 setTimeout((index) => {
                     johnny.classList.remove("johnny-image-active2");
+                    vent.play();
                     johnny.classList.add("johnny-image-active3");
+                    vent.pause();
                 }, 4000, i);
             }, 2000, i);
             setTimeout((index) => {
