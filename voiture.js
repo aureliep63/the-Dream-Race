@@ -97,7 +97,8 @@ var poulpe1 = document.querySelector(".poulpe1");
 var q1 = document.querySelector(".q1");
 var johnnyface = document.querySelector(".johnny-face");
 const tictac = new Audio('image/tic-tac.wav');
-const vent = new Audio('image/vent.flac');
+var vol = 1;
+var interval = 200;
 
 document.querySelector("#MYform").addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche l'envoi du formulaire par défaut
@@ -114,7 +115,20 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
             setTimeout((index) => {
                 charles[index].classList.remove("charles-active");
                 etoileentiere2.classList.add("etoile-entiere-2-active");
-                clap.pause();
+                setInterval(
+                    function () {
+                        // Reduce volume by 0.05 as long as it is above 0
+                        // This works as long as you start with a multiple of 0.05!
+                        if (vol > 0) {
+                            vol -= 0.05;
+                            clap.volume = vol;
+                        }
+                        else {
+                            // Stop the setInterval when 0 is reached
+                            clap.pause();
+                            clearInterval(fadeout);
+                        }
+                    }, interval);
                 johnnyface.classList.add("johnny-face-active");
                 salut.classList.add("salut-active");
                 setTimeout((index) => {
