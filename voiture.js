@@ -193,7 +193,7 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
 
     // Vérification de la réponse
 
-    if (reponseUtilisateur.toLowerCase() === "17") {
+    if (reponseUtilisateur.toLowerCase() === "19") {
         win.play();
 
         for (var i = 0; i < charles.length; i++) {
