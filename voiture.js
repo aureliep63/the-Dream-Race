@@ -97,6 +97,7 @@ var poulpe1 = document.querySelector(".poulpe1");
 var q1 = document.querySelector(".q1");
 var johnnyface = document.querySelector(".johnny-face");
 const tictac = new Audio('image/tic-tac.wav');
+const poulpesound = new Audio('image/poulpe.wav');
 var vol = 1;
 var interval = 200;
 
@@ -120,7 +121,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                         // Reduce volume by 0.05 as long as it is above 0
                         // This works as long as you start with a multiple of 0.05!
                         if (vol > 0) {
-                            vol -= 0.05;
+                            vol -= 0.17;
                             clap.volume = vol;
                         }
                         else {
@@ -136,12 +137,14 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     johnny.classList.add("johnny-image-active2");
                     salut.classList.remove("salut-active");
                     metroid.classList.add("metroid-active");
+                    poulpesound.play();
                     poulpe.classList.add("poulpe-active");
                     setTimeout((index) => {
                         poulpe.classList.remove("poulpe-active");
                         poulpe1.classList.add("poulpe1-active");
                     }, 5000, i);
                     setTimeout((index) => {
+                        poulpesound.pause();
                         photoleclerc.classList.add("photo-leclerc-active");
                         tictac.play();
                         tictac.loop = true;
@@ -162,6 +165,7 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
     } else {
         popd.innerText = "Mauvaise réponse! Veuillez réessayer.";
         popd.classList.add("mauvaise-rep");
+
     }
 });
 
@@ -170,6 +174,9 @@ var etoileentiere3 = document.querySelector(".etoile-entiere-3");
 var q2 = document.querySelector(".q2");
 var recommence1 = document.querySelector("#recommence-1");
 var fin = document.querySelector(".fin");
+const surprise = new Audio('image/surprise.wav');
+const soundmauvaise = new Audio('image/soundmauvaise.flac');
+const aaamario = new Audio('image/aaamario.mp3');
 
 
 document.querySelector("#ma-question-1").addEventListener("submit", function (event) {
@@ -195,6 +202,7 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
                 setTimeout((index) => {
                     johnny.classList.remove("johnny-image-active2");
                     johnny.classList.add("johnny-image-active3");
+
                 }, 4000, i);
             }, 2000, i);
             setTimeout((index) => {
@@ -202,8 +210,13 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
                 etoileentiere3.classList.add("etoile-entiere-3-active");
             }, 2000, i);
             setTimeout((index) => {
+                surprise.play();
                 fin.classList.add("fin-active");
+                setTimeout((index) => {
+                    aaamario.play();
+                }, 800, i);
             }, 5000, i);
+
             setTimeout((index) => {
                 window.location.href = 'https://www.new-men-upgraders.fr/';
             }, 7000, i);
@@ -215,6 +228,7 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
         q1.classList.remove("mauvaise-rep");
 
     } else {
+        soundmauvaise.play();
         question1.innerText = "Mauvaise réponse! Veuillez réessayer";
         recommence1.innerText = "La photo revient pour 10s !!!";
         question1.classList.add("mauvaise-rep");
@@ -269,6 +283,7 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
                 etoileentiere3.classList.add("etoile-entiere-3-active");
             }, 2000, i);
             setTimeout((index) => {
+                surprise.play();
                 fin.classList.add("fin-active");
             }, 5000, i);
             setTimeout((index) => {
@@ -281,6 +296,7 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
         q2.classList.remove("mauvaise-rep");
 
     } else {
+        soundmauvaise.play();
         question2.innerText = "Mauvaise réponse! Veuillez réessayer.";
         recommence2.innerText = "La photo revient pour 10s !!!";
         question2.classList.add("mauvaise-rep");
@@ -337,6 +353,7 @@ document.querySelector("#ma-question-3").addEventListener("submit", function (ev
                 etoileentiere3.classList.add("etoile-entiere-3-active");
             }, 2000, i);
             setTimeout((index) => {
+                surprise.play();
                 fin.classList.add("fin-active");
             }, 5000, i);
             setTimeout((index) => {
@@ -349,6 +366,7 @@ document.querySelector("#ma-question-3").addEventListener("submit", function (ev
         q3.classList.remove("mauvaise-rep");
 
     } else {
+        soundmauvaise.play();
         question3.innerText = "Mauvaise réponse! Veuillez réessayer.";
         question3.classList.add("mauvaise-rep");
     };
