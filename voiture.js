@@ -201,7 +201,6 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
 
                 setTimeout((index) => {
                     johnny.classList.remove("johnny-image-active2");
-                    vent.play();
                     johnny.classList.add("johnny-image-active3");
 
                 }, 4000, i);
