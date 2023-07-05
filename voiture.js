@@ -6,7 +6,7 @@ var question = document.getElementsByClassName('question')[0];
 var ferraridevant = document.getElementsByClassName('ferrari-devant')[0];
 var explication = document.querySelector('.explication');
 
-const clap = new Audio('image/clap.wav');
+const clap = new Audio('image/clap.mp3');
 
 document.querySelectorAll(".ferrari-arriere").forEach(voiture => {
     voiture.addEventListener("click", () => {
@@ -98,6 +98,7 @@ var q1 = document.querySelector(".q1");
 var johnnyface = document.querySelector(".johnny-face");
 const tictac = new Audio('image/tic-tac.wav');
 const poulpesound = new Audio('image/poulpe.wav');
+const jo = new Audio('image/jo.mp3');
 var vol = 1;
 var interval = 200;
 
@@ -132,9 +133,12 @@ document.querySelector("#MYform").addEventListener("submit", function (event) {
                     }, interval);
                 johnnyface.classList.add("johnny-face-active");
                 salut.classList.add("salut-active");
+                jo.play();
+                jo.loop = true;
                 setTimeout((index) => {
                     johnnyface.classList.remove("johnny-face-active");
                     johnny.classList.add("johnny-image-active2");
+                    jo.pause();
                     salut.classList.remove("salut-active");
                     metroid.classList.add("metroid-active");
                     poulpesound.play();
@@ -177,6 +181,8 @@ var fin = document.querySelector(".fin");
 const surprise = new Audio('image/surprise.wav');
 const soundmauvaise = new Audio('image/soundmauvaise.flac');
 const aaamario = new Audio('image/aaamario.mp3');
+const win = new Audio('image/win.wav');
+
 
 
 document.querySelector("#ma-question-1").addEventListener("submit", function (event) {
@@ -188,7 +194,7 @@ document.querySelector("#ma-question-1").addEventListener("submit", function (ev
     // Vérification de la réponse
 
     if (reponseUtilisateur.toLowerCase() === "17") {
-
+        win.play();
 
         for (var i = 0; i < charles.length; i++) {
             charles[i].classList.toggle("charles-active");
@@ -263,7 +269,7 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
     // Vérification de la réponse
 
     if (reponseUtilisateur.toLowerCase() === "16") {
-
+        win.play();
 
         for (var i = 0; i < charles.length; i++) {
             charles[i].classList.toggle("charles-active");
@@ -285,6 +291,9 @@ document.querySelector("#ma-question-2").addEventListener("submit", function (ev
             setTimeout((index) => {
                 surprise.play();
                 fin.classList.add("fin-active");
+                setTimeout((index) => {
+                    aaamario.play();
+                }, 800, i);
             }, 5000, i);
             setTimeout((index) => {
                 window.location.href = 'https://www.new-men-upgraders.fr/';
@@ -334,7 +343,7 @@ document.querySelector("#ma-question-3").addEventListener("submit", function (ev
     // Vérification de la réponse
 
     if (reponseUtilisateur.toLowerCase() === "cheval") {
-
+        win.play();
 
         for (var i = 0; i < charles.length; i++) {
             charles[i].classList.toggle("charles-active");
@@ -355,6 +364,9 @@ document.querySelector("#ma-question-3").addEventListener("submit", function (ev
             setTimeout((index) => {
                 surprise.play();
                 fin.classList.add("fin-active");
+                setTimeout((index) => {
+                    aaamario.play();
+                }, 800, i);
             }, 5000, i);
             setTimeout((index) => {
                 window.location.href = 'https://www.new-men-upgraders.fr/';
